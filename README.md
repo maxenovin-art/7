@@ -1,14 +1,18 @@
 
-# Inventory & Sales Management (Vercel)
+# Inventory & Sales Management (Vercel - Fixed)
 
-## اجرا لوکال
+## Local Run
 ```bash
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-## دپلوی روی Vercel
+## Deploy on Vercel
 ```bash
 npm i -g vercel
-vercel
+vercel --prod
 ```
+
+## Notes
+- SQLite runs in /tmp due to Vercel serverless limitations
+- Tables are created lazily on each request
